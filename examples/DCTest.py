@@ -28,31 +28,33 @@ myMotor.run(Adafruit_MotorHAT.RELEASE);
 
 while (True):
     print("Forward! ")
-    myMotor.run(Adafruit_MotorHAT.FORWARD)
+    myMotor1.run(Adafruit_MotorHAT.FORWARD)
+    myMotor2.run(Adafruit_MotorHAT.FORWARD)
+    myMotor1.setSpeed(MOTOR_1_SPEED)
+    myMotor2.setSpeed(MOTOR_2_SPEED)
+    
 
-    print("\tSpeed up...")
-    for i in range(255):
-        myMotor.setSpeed(i)
-        time.sleep(0.01)
 
-    print("\tSlow down...")
-    for i in reversed(range(255)):
-        myMotor.setSpeed(i)
-        time.sleep(0.01)
+    #print("\tSlow down...")
+    #for i in reversed(range(255)):
+        #myMotor.setSpeed(i)
+        #time.sleep(0.01)
 
-    print("Backward! ")
-    myMotor.run(Adafruit_MotorHAT.BACKWARD)
+    
+    #print("Backward! ")
+    #myMotor.run(Adafruit_MotorHAT.BACKWARD)
 
-    print("\tSpeed up...")
-    for i in range(255):
-        myMotor.setSpeed(i)
-        time.sleep(0.01)
+    #print("\tSpeed up...")
+    #for i in range(255):
+        #myMotor.setSpeed(i)
+        #time.sleep(0.01)
 
-    print("\tSlow down...")
-    for i in reversed(range(255)):
-        myMotor.setSpeed(i)
-        time.sleep(0.01)
+    #print("\tSlow down...")
+    #for i in reversed(range(255)):
+        #myMotor.setSpeed(i)
+        #time.sleep(0.01)
 
     print("Release")
-    myMotor.run(Adafruit_MotorHAT.RELEASE)
+    myMotor1.run(Adafruit_MotorHAT.RELEASE)
+    myMotor2.run(Adafruit_MotorHAT.RELEASE)
     time.sleep(1.0)
